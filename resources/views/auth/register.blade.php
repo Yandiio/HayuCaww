@@ -38,7 +38,14 @@
 
     </style>
     <div class="container">
-
+        @if(Session::has('alert'))
+        <div class="alert alert-success">
+            {{ Session::get('alert') }}
+            @php
+            Session::forget('alert');
+            @endphp
+        </div>
+        @endif
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -52,6 +59,18 @@
                             <form class="user" method="POST" action="{{route('register')}}">
                                 {{csrf_field()}}
                                 <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('name') ? 'has-error' : ''}}">
+                                        <input type="text" name="name" class="form-control form-control-user"
+                                            value="{{old('name')}}" placeholder="Name">
+
+                                        @if ($errors->has('name'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
+
+
                                     <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('first_name') ? 'has-error' : ''}}">
                                         <input type="text" name="first_name" class="form-control form-control-user"
                                             value="{{old('first_name')}}" placeholder="First Name">
@@ -74,19 +93,19 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class=" form-group {{$errors->has('email')}}">
-                                    <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        value="{{old('email')}}" placeholder="Email Address">
+                                <div class=" form-group {{$errors->has('email') ? 'has-error' : ''}}">
+                                    <input type="email" name="email" class="form-control form-control-user"
+                                        id="exampleInputEmail" value="{{old('email')}}" placeholder="Email Address">
                                     @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                     @endif
                                 </div>
-                                <div class="form-group row {{$errors->has('password')}}">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div class="form-group row ">
+                                    <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('password') ? 'has-error' : ''}}">
                                         <input type="password" name="password" class="form-control form-control-user"
-                                            id="password" placeholder="Password" value="{{old('password')}}" >
+                                            id="password" placeholder="Password" value="{{old('password')}}">
                                         @if($errors->has('password'))
                                         <span clas="help-block">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -95,14 +114,14 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="password-confirm" name="password_confirm" placeholder="Repeat Password" required>
+                                            id="password-confirm" name="password_confirmation" placeholder="Repeat Password"
+                                            required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('first_name') ? 'has-error' : ''}}">
-                                        <select name="title" class="form-control"
-                                            value="{{old('title')}}" required>
+                                        <select name="title" class="form-control" value="{{old('title')}}" required>
                                             <option value="" default selected>Title</option>
                                             <option value="Tuan">Tuan</option>
                                             <option value="Nyonya">Nyonya</option>
@@ -116,7 +135,7 @@
                                         @endif
                                     </div>
 
-                                    <div class="col-sm-6{{$errors->has('phone')}}">
+                                    <div class="col-sm-6{{$errors->has('phone') ? 'has-error' : ''}}">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"
                                             name="phone" placeholder="Phone" value="{{old('phone')}}">
 
@@ -131,10 +150,10 @@
                                     Register!
                                 </button>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <a href="#" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
                                 </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                <a href="#" class="btn btn-facebook btn-user btn-block">
                                     <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
                                 </a>
                             </form>

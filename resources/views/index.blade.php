@@ -56,7 +56,7 @@
     </div>
 
     <div class="item">
-      <img src="images/travel.jpg" alt="...">
+      <img src="images/pesawat.jpg" alt="...">
       <div class="carousel-caption">
         <h1>HayuCaww Memberikan pilihan Maskapai dan Kereta Terbaik untuk Perjalanan Anda</h1>
       </div>
