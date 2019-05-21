@@ -68,7 +68,7 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Pesawat</li>
+          <li class="active">Jadwal Penerbangan Pesawat</li>
       </ol>
     </div><br><!--/.row-->
 
@@ -124,19 +124,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                     <label for="code">Kursi Ekonomi:</label>
-                    <input type="text" class="form-control option" id="eco_seat" name="eco_seat" readonly>
+                    <input type="text" class="form-control option" id="eco_seat" name="eco_seat" required>
                 </div>
               </div>
                 <div class="col-md-4">
                   <div class="form-group">
                       <label for="code">Kursi Bisnis:</label>
-                      <input type="text" class="form-control option" id="bus_seat" name="bus_seat" readonly>
+                      <input type="text" class="form-control option" id="bus_seat" name="bus_seat" required>
                   </div>
                 </div>
                   <div class="col-md-4">
                     <div class="form-group">
                         <label for="code">Kursi First Class:</label>
-                        <input type="text" class="form-control option" id="first_seat" name="first_seat" readonly>
+                        <input type="text" class="form-control option" id="first_seat" name="first_seat" required>
                     </div>
                   </div>
                   <div class="col-md-4">

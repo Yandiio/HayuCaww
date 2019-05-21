@@ -65,7 +65,7 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Kereta Api</li>
+          <li class="active">adwal Keberangkatan Kereta</li>
       </ol>
     </div><br><!--/.row-->
 

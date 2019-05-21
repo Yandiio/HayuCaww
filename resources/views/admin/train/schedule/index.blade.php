@@ -7,7 +7,7 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Pesawat</li>
+          <li class="active">Jadwal Keberangkatan Kereta</li>
       </ol>
     </div><br><!--/.row-->
 
@@ -22,7 +22,8 @@
                     <strong>{{ Session::get('alert-success') }}</strong>
                 </div>
             @endif
-          <a href="{{ url('admin/train/schedule/create')}}" class="fa fa-plus-circle fa-2x"></a><h3 align="center">JADWAL KEBERANGKATAN</h3>
+          <a href="{{ url('admin/train/schedule/create')}}" class="fa fa-plus-circle fa-2x"></a>
+          <h3 align="center">JADWAL KEBERANGKATAN</h3>
           <hr>
           <table class="table table-striped table-bordered data">
               <thead>

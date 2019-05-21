@@ -20,4 +20,15 @@ class HomeController extends Controller
         $train_station = TrainStation::all();
         return view('index', compact('airport', 'train_station'));
     }
+
+    public function schedule()
+    {
+        // $airport = Airport::all();
+        // $plane = Plane::all();
+        $plane_schedule = \App\Models\PlaneSchedule::all();
+        $train_schedule = \App\Models\TrainSchedule::all();
+        // $train_station = TrainStation::all();
+        // $train= Train::all();
+        return view('user/schedule', compact('plane_schedule', 'train_schedule'));
+    }
 }

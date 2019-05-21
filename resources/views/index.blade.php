@@ -267,8 +267,10 @@
 <hr class="half-rule">
 <div class="col-12-lg text-center">
   <h1 class="section-heading text">Jadwal Keberangkatan</h1>
-  <h4 class="text-muted">Masi Bingung mau berangkat jam berapa ? Lihat Jadwal Keberangkatan disini</h4>
-  <button class="btn btn-primary">Klik Disini!</button>
+  <h4 class="text-muted">Masih Bingung mau berangkat jam berapa ? Lihat Jadwal Keberangkatan disini</h4>
+  <a href="{{ url('schedule') }}">
+		<button type="button" class="btn btn-primary">Klik Disini!</button>
+	</a>
 </div><br><br>
 <hr class="half-rule">
 <!-- Services -->

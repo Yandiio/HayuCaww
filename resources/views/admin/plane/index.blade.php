@@ -7,14 +7,13 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Pesawat</li>
+          <li class="active">Data Pesawat</li>
       </ol>
     </div><br><!--/.row-->
 
 <body>
   <div class="row">
     <div class="col-md-12">
-            <h1>Data Pesawat</h1>
             <div class="panel panel-default">
               <div class="panel-body">
             @if(Session::has('alert-success'))

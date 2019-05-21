@@ -69,7 +69,7 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Pesawat</li>
+          <li class="active">Jadwal Penerbangan Pesawat</li>
       </ol>
     </div><br><!--/.row-->
 

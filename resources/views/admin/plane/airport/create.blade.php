@@ -8,7 +8,7 @@
           <li><a href="#">
               <em class="fa fa-home"></em>
               </a></li>
-          <li class="active">Pesawat</li>
+          <li class="active">Data Bandara</li>
       </ol>
     </div><br><!--/.row-->
 
@@ -25,7 +25,7 @@
           <form action="{{ url('admin/airport') }}" method="post">
               {{ csrf_field() }}
               <div class="form-group">
-                  <label for="nama">Nama Pesawat :</label>
+                  <label for="nama">Nama Bandara :</label>
                   <input type="text" class="form-control" id="airport_name" name="airport_name">
               </div>
               <div class="form-group">
@@ -33,7 +33,7 @@
                   <input type="text" class="form-control" id="code" name="code">
               </div>
               <div class="form-group">
-                  <label for="city">Kota ::</label>
+                  <label for="city">Kota :</label>
                   <input type="text" class="form-control" id="city" name="city">
               </div>
               <div class="form-group">

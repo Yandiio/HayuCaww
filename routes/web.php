@@ -8,6 +8,8 @@ Route::get('station/ajax/{id}','AdminController@stationAjax');
 Auth::routes();
 //home / index
 Route::get('', 'HomeController@index');
+// Schedule User
+Route::get('schedule', 'HomeController@schedule');
 //booking
 Route::group(['prefix' => 'booking'], function(){
   Route::post('search', 'BookingController@search');

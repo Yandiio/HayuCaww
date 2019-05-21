@@ -24,7 +24,7 @@
 </head>
 <body>
   <div id="app" >
-    <nav class="navbar navbar-fixed-top navbar-default bg-dark">
+    <nav class="navbar navbar-fixed-top navbar-inverse bg-dark">
       <div class="navbar-header page-scroll">
         <!-- Collapsed Hamburger -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
