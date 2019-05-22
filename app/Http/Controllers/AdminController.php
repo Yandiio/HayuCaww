@@ -77,17 +77,24 @@ class AdminController extends Controller
           ],
           [
               "label" => "Kereta",
-              'backgroundColor' => "rgba(38, 185, 154, 0.31)",
-              'borderColor' => "rgba(38, 185, 154, 0.7)",
-              "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
-              "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+              'backgroundColor' => "rgba(38, 154, 185, 0.31)",
+              'borderColor' => "rgba(38, 154, 255, 0.7)",
+              "pointBorderColor" => "rgba(38, 154, 255, 0.7)",
+              "pointBackgroundColor" => "rgba(38, 154, 255, 0.7)",
               "pointHoverBackgroundColor" => "#fff",
               "pointHoverBorderColor" => "rgba(220,220,220,1)",
               'data' => [$trainArr[2],$trainArr[3],$trainArr[4],$trainArr[5],$trainArr[6],$trainArr[7],$trainArr[8],$trainArr[9],$trainArr[10],$trainArr[11],$trainArr[12]],
           ]
       ])
       ->options([]);
-      return view('admin.index', compact('chartjs'));
+      $pemesanan = \App\Models\Booking::all();
+      //Hitung Pengguna (1 = Pengguna, 2 = Admin)
+      $pengguna = DB::table("role_user")->where("role_id", 1)->get();
+      $jadwal_p = \App\Models\Booking::select('id','vehicle')
+                   ->where('vehicle', 'plane')->get();
+      $jadwal_t = \App\Models\Booking::select('id','vehicle')
+                   ->where('vehicle', 'plane')->get();
+      return view('admin.index', compact('chartjs', 'pemesanan', 'pengguna', 'jadwal_p', 'jadwal_t'));
     }
     public function showUsers()
     {
@@ -123,5 +130,9 @@ class AdminController extends Controller
     {
       $destination = DB::table("airports")->where("id",$id)->get();
       return response()->json($destination);
+    }
+    public function countRow(){
+      $hasil = \App\Models\Booking::all();
+      return view('admin.index', compact('hasil'));
     }
 }
