@@ -1,8 +1,8 @@
 @extends('errors.layout')
 
-@section('title', 'Page Not Found')
+@section('title', 'Access Denied')
 
 @section('message')
-  Maaf, Halaman yang anda tuju tidak dapat ditemukan.<br>
+  Maaf, Anda tidak terdaftar sebagai Admin<br>
 <button class="btn btn-primary" id="goback" type="button" name="button">Kembali</button>
 @stop

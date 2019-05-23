@@ -52,7 +52,9 @@
             @endif
             <!-- Nested Row within Card Body -->
               <div class="row">
-                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                  <img src="../../HayuCaww/public/images/traveler1.jpeg" alt=" Ini Gambar" width="475" height="725">
+                </div>
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">

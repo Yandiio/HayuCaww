@@ -50,7 +50,9 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image">
+                        <img src="../../HayuCaww/public/images/traveler3.jpg" alt=" Ini Gambar" width="500" height="750">
+                    </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -68,9 +70,9 @@
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                         @endif
-                                    </div>
+                                </div>
 
-
+                                    
                                     <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('first_name') ? 'has-error' : ''}}">
                                         <input type="text" name="first_name" class="form-control form-control-user"
                                             value="{{old('first_name')}}" placeholder="First Name">
@@ -81,8 +83,9 @@
                                         </span>
                                         @endif
                                     </div>
-
-                                    <div class="col-sm-6{{$errors->has('last_name')}}">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0{{$errors->has('last_name')}}">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"
                                             name="last_name" placeholder="Last Name" value="{{old('last_name')}}">
 
@@ -146,9 +149,12 @@
                                         @endif
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-user" type="submit">
-                                    Register!
-                                </button>
+                                <center>
+                                    <button class="btn btn-primary btn-user" type="submit">
+                                        Register!
+                                    </button>
+                                </center>
+                                
                                 <hr>
                                 <a href="#" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google

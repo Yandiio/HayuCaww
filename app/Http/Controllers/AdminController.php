@@ -93,7 +93,7 @@ class AdminController extends Controller
       $jadwal_p = \App\Models\Booking::select('id','vehicle')
                    ->where('vehicle', 'plane')->get();
       $jadwal_t = \App\Models\Booking::select('id','vehicle')
-                   ->where('vehicle', 'plane')->get();
+                   ->where('vehicle', 'train')->get();
       return view('admin.index', compact('chartjs', 'pemesanan', 'pengguna', 'jadwal_p', 'jadwal_t'));
     }
     public function showUsers()

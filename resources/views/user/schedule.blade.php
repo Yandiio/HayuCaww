@@ -3,7 +3,7 @@
 @section('content')
   <!-- tab -->
   <div class="container">
-    <a href="{{ url('')}}" class="fa fa-arrow-circle-left fa-2x"></a>
+    {{-- <a href="{{ url('')}}" class="fa fa-arrow-circle-left fa-2x"></a> --}}
   <h1>Jadwal Keberangkatan</h1>
   <div class="row">
     <div role="tabpanel">

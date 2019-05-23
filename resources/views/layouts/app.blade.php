@@ -56,6 +56,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a href="{{ url('user/booking/'.Auth::user()->id) }}">Pemesanan</a></li>
+                <li><a href="{{ url('admin') }}">Halaman Admin</a></li>
                 <li><a href="{{ url('user/edit/'.Auth::user()->id.'/profile')}}">Ubah profile</a></li>
                 <li><a href="{{ url('user/edit/'.Auth::user()->id.'/password')}}">Ubah password</a></li>
                 <li>
