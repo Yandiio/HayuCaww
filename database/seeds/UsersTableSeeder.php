@@ -16,15 +16,15 @@ class UsersTableSeeder extends Seeder
         //membuat Role
         $member = new Role();
         $member->name         = 'member';
-        $member->display_name = 'Member EzGoo'; // optional
-        $member->description  = 'Pengguna menjadi member di EzGoo'; // optional
+        $member->display_name = 'Member '; // optional
+        $member->description  = 'Pengguna menjadi member hayuCaww '; // optional
         $member->save();
 
         //membuat Role
         $admin = new Role();
         $admin->name         = 'admin';
-        $admin->display_name = 'Admin EzGoo'; // optional
-        $admin->description  = 'Admin'; // optional
+        $admin->display_name = 'Admin '; // optional
+        $admin->description  = 'Admin di hayuCaww'; // optional
         $admin->save();
 
         // membuat Permission

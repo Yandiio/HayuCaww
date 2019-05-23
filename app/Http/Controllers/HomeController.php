@@ -23,12 +23,9 @@ class HomeController extends Controller
 
     public function schedule()
     {
-        // $airport = Airport::all();
-        // $plane = Plane::all();
-        $plane_schedule = \App\Models\PlaneSchedule::all();
-        $train_schedule = \App\Models\TrainSchedule::all();
-        // $train_station = TrainStation::all();
-        // $train= Train::all();
+        $now = date("Y-m-d h:i:s");
+        $plane_schedule = \App\Models\PlaneSchedule::all()->where('boarding_time', ">=" ,$now);
+        $train_schedule = \App\Models\TrainSchedule::all()->where('boarding_time', ">=" ,$now);
         return view('user/schedule', compact('plane_schedule', 'train_schedule'));
     }
 }

@@ -5,8 +5,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\BankAccount::class, function (Faker $faker) {
   static $num = -1;
 
-  $bank = ["BCA","BRI","Mandiri"];
-  $account_name = ["EzGooBCA","EzGooBRI","EzGooMandiri"];
+  $bank = ["BCA","BRI","Bangkrut Sejahtera"];
+  $account_name = ["Yandi Fenanda","Aip Ariyadi","Audi Syahzehan"];
   $account_num = [rand(10000, 99999),rand(10000, 99999),rand(10000, 99999)];
   $num++;
 
